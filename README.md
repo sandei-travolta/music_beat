@@ -1,7 +1,7 @@
 # Music Beat
 
 A platform that syncs playlists for youtube and spotify
-<img src="docs/images/logo.png" alt="Project Logo" width="200" height="150"/>
+<img src="https://github.com/sandei-travolta/music_beat/blob/master/res/logo.png" alt="Project Logo" width="200" height="150"/>
 
 ## Description
 A unified music platform that synchronizes playlists between YouTube and Spotify, allowing users to seamlessly manage, transfer, and keep their playlists in sync across both services.

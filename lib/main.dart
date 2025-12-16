@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:music_beat/routing/router.dart';
 import 'package:music_beat/ui/core/themes/theme.dart';
-import 'package:rive/rive.dart' as rive;
+
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
-  await rive.RiveNative.init();
   runApp(const MainApp());
 }
 
