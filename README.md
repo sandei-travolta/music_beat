@@ -1,4 +1,4 @@
-<img src="https://github.com/sandei-travolta/music_beat/blob/master/res/logo.png" alt="Project Logo" width="200" height="150"/>
+<img src="https://github.com/sandei-travolta/music_beat/blob/master/res/logo.png" alt="Project Logo" width="400" height="400"/>
 
 # Music Beat
 
