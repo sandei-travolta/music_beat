@@ -4,8 +4,11 @@ import 'package:go_router/go_router.dart';
 import '../../../routing/routes.dart';
 class GetStartedBtn extends StatelessWidget {
   const GetStartedBtn({
-    super.key,
+    super.key, required this.page, required this.nextPage,
   });
+  final int page;
+
+  final VoidCallback nextPage;
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +18,14 @@ class GetStartedBtn extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: ElevatedButton(
               onPressed: (){
-                context.go(Routes.home);
+                if(page==0){
+                nextPage();
+                }else{
+                  context.go(Routes.home);
+                }
+
               },
-              child: Text("Get Started")
+              child: page!=0?Text("Get Started"):Text("Welcome")
           ),
         ),
         const SizedBox(

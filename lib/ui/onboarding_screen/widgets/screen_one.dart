@@ -16,7 +16,7 @@ class ScreenOne extends StatelessWidget {
         Container(
             padding: .symmetric(vertical:12.0,horizontal:17.0),
             child: Text(AppTexts.onboardingText,style:Theme.of(context).textTheme.bodyMedium,)),
-        const SizedBox(height: 50,),
+        const SizedBox(height: 100,),
 
       ],
     );

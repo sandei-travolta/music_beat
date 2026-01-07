@@ -8,7 +8,6 @@ class ScreenTwo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.yellow,
         image: DecorationImage(image: AssetImage(AppImages.OnboardingImage1),
           fit: BoxFit.cover,
         ),
