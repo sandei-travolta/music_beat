@@ -3,10 +3,11 @@ import 'package:music_beat/ui/core/themes/colors.dart';
 
 abstract final class AppTheme {
   static ThemeData lightTheme =ThemeData(
-    brightness: .light,
+      brightness: .light,
     colorScheme: AppColors.lightColorScheme,
     textTheme: _textTheme,
     elevatedButtonTheme: _elevatedButtonTheme,
+    bottomNavigationBarTheme: _bottomNavigationTheme
   );
   static const _textTheme=TextTheme(
     bodyMedium: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w500,),
@@ -23,5 +24,13 @@ abstract final class AppTheme {
         fontWeight: .w600
       )
     ),
+  );
+  static final _bottomNavigationTheme=BottomNavigationBarThemeData(
+    type: BottomNavigationBarType.fixed,
+    backgroundColor: AppColors.black1,
+    selectedItemColor: AppColors.white1,
+    unselectedItemColor: Colors.grey,
+    selectedIconTheme: IconThemeData(color: AppColors.white1),
+    unselectedIconTheme: IconThemeData(color: Colors.grey),
   );
 }

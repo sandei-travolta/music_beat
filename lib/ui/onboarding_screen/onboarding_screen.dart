@@ -5,7 +5,7 @@ import 'widgets/screen_one.dart';
 import 'widgets/screen_two.dart';
 
 class OnboardingScreen extends StatefulWidget {
-  OnboardingScreen({super.key});
+  const OnboardingScreen({super.key});
 
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState();
@@ -19,9 +19,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   ];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     viewModel=OnboardingScreenViewModel();
+  }
+  @override
+  void dispose() {
+    viewModel.dispose();
+    super.dispose();
   }
   @override
   Widget build(BuildContext context) {
