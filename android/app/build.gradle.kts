@@ -4,7 +4,12 @@ plugins {
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
+def dotenv = new Properties()
+def envFile = rootProject.file(".env")
 
+if (envFile.exists()) {
+    envFile.withInputStream { dotenv.load(it) }
+}
 android {
     namespace = "com.donuldmduck.tech.music_beat"
     compileSdk = flutter.compileSdkVersion
@@ -28,6 +33,8 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        buildConfigField "String", "SPOTIFY_CLIENT_ID", "\"${dotenv['SPOTIFY_CLIENT_ID']}\""
+        buildConfigField "String", "SPOTIFY_REDIRECT_URI", "\"${dotenv['SPOTIFY_REDIRECT_URI']}\""
     }
 
     buildTypes {
@@ -38,6 +45,7 @@ android {
         }
     }
     dependencies {
+        implementation("com.spotify.android:auth:1.2.5")
 
     }
 

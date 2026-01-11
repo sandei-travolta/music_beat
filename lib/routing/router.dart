@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:music_beat/ui/dashboard/dashboard_page.dart';
 import 'package:music_beat/ui/discover/discover_page.dart';
 import 'package:music_beat/ui/homepage/home_page.dart';
-import 'package:music_beat/ui/homepage/widgets/settings_page.dart';
+import 'package:music_beat/ui/settings/settings_page.dart';
 import 'package:music_beat/ui/onboarding_screen/onboarding_screen.dart';
 import 'package:music_beat/ui/stats/stats_page.dart';
 
